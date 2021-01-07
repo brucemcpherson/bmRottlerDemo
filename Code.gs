@@ -10,7 +10,11 @@
   const fiddler = getFiddler ()
   
   // a fiddler to copy the changed data to
-  const copy = bmPreFiddler.PreFiddler().getFiddler({id:fiddler.getSheet().getParent().getId()})
+  const copy = bmPreFiddler.PreFiddler().getFiddler({
+    id:fiddler.getSheet().getParent().getId(),
+    sheetName: 'copy sheet',
+    createIfMissing: true  
+  })
   
   // set up rate limiting for the weather API
   // allow on 40 calls per minute, with at least 100ms betweene ach one
@@ -19,8 +23,6 @@
     delay: 100,
     rate: 40,
     synch: true,
-    smooth: true,
-    smoothMinimum: 0.0,
     sleep: (ms) => {
       console.log('sleeping',ms)
       Utilities.sleep(ms)
@@ -28,7 +30,7 @@
   })
   
   // this is the input data
-  const rows = fiddler.getData().slice(0,50)
+  const rows = fiddler.getData().slice(0,5)
   
   // now we can use this rottler to control access to the api in various ways
   // 1. most tradition way would be this
