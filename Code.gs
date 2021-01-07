@@ -5,7 +5,7 @@
  const demo = () =>  {
   // get the key for the weather api
   const apiKey = getApiKey()
-  console.log(apiKey)
+
   // get the source data
   const fiddler = getFiddler ()
   
@@ -20,17 +20,16 @@
   // allow on 40 calls per minute, with at least 100ms betweene ach one
   const rot = bmRottler.newRottler({
     period: 1000 * 60,
-    delay: 100,
+    delay: 1000,
     rate: 40,
     synch: true,
     sleep: (ms) => {
-      console.log('sleeping',ms)
       Utilities.sleep(ms)
     }
   })
   
   // this is the input data
-  const rows = fiddler.getData().slice(0,5)
+  const rows = fiddler.getData()
   
   // now we can use this rottler to control access to the api in various ways
   // 1. most tradition way would be this
@@ -62,9 +61,28 @@
   
   rot.reset()
   // 4. see if you can figure this one out
-  copy.setData(Array.from(rot.rowIterator({ rows, transformer: ({row})=> decorateRow({result: getWeather({row, apiKey}), row })})).map(({transformation})=>transformation)).dumpValues()
+  copy.setData(
+    Array.from(rot.rowIterator({ 
+      rows, transformer: ({row})=> decorateRow({result: getWeather({row, apiKey}), row })
+    }))
+    .map(({transformation})=>transformation))
+    .dumpValues()
 
 
+  rot.reset()
+
+  const rowTransformer = rot.rowIterator({ 
+    rows, 
+    transformer: ({row})=> decorateRow({result: getWeather({row, apiKey}), row })
+  })
+
+  // and decorate as we go
+  const newTransformed = []
+  for   (let {transformation} of rowTransformer) {
+    newTransformed.push(transformation)
+  }
+  // write update values
+  copy.setData(newTransformed).dumpValues()
    
    
  }
