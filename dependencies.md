@@ -1,5 +1,5 @@
 # Google Apps Script Project: bmRottlerDemo
-This repo (bmRottlerDemo) was automatically updated on 1/7/2021, 5:55:10 PM by GasGit
+This repo (bmRottlerDemo) was automatically updated on 1/8/2021, 12:38:01 PM by GasGit
 
 For more information on gasgit, see the [desktop liberation site](https://ramblings.mcpher.com/drive-sdk-and-github/migrategasgit/ "desktop liberation")
 
@@ -20,14 +20,16 @@ Code| server_js
 ### Directly referenced libraries
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-bmRottler| bmRottler|1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD|8|no|[here](libraries/bmRottler "library source")
 bmPreFiddler| bmPreFiddler|13JUFGY18RHfjjuKmIRRfvmGlCYrEkEtN6uUm-iLUcxOUFRJD-WBX-tkR|5|no|[here](libraries/bmPreFiddler "library source")
+bmRottler| bmRottler|1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD|10|no|[here](libraries/bmRottler "library source")
+bmQottle| bmQottle|1J_Oci2WG7wQ4KffCg8XOs-HID9gaIjEcNFlidE_7gwiJnrgQw24ozKct|2|no|[here](libraries/bmQottle "library source")
 ### All dependencies and sub dependencies
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-bmRottler| bmRottler|1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD|8|no|[here](libraries/bmRottler "library source")
 bmPreFiddler| bmPreFiddler|13JUFGY18RHfjjuKmIRRfvmGlCYrEkEtN6uUm-iLUcxOUFRJD-WBX-tkR|5|no|[here](libraries/bmPreFiddler "library source")
 bmFiddler| bmFiddler|13EWG4-lPrEf34itxQhAQ7b9JEbmCBfO8uE4Mhr99CHi3Pw65oxXtq-rU|4|no|[here](libraries/bmFiddler "library source")
+bmRottler| bmRottler|1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD|10|no|[here](libraries/bmRottler "library source")
+bmQottle| bmQottle|1J_Oci2WG7wQ4KffCg8XOs-HID9gaIjEcNFlidE_7gwiJnrgQw24ozKct|2|no|[here](libraries/bmQottle "library source")
 ### Enabled Google Services
 no libraries discovered
 ### Scopes required
