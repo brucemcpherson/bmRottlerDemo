@@ -5,15 +5,19 @@
   "dependencies": {
     "libraries": [
       {
-        "userSymbol": "bmRottler",
-        "libraryId": "1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD",
-        "version": "8"
-      },
-      {
         "userSymbol": "bmPreFiddler",
         "libraryId": "13JUFGY18RHfjjuKmIRRfvmGlCYrEkEtN6uUm-iLUcxOUFRJD-WBX-tkR",
-        "version": "5",
-        "developmentMode": false
+        "version": "5"
+      },
+      {
+        "userSymbol": "bmRottler",
+        "libraryId": "1dajqLysdKo8IoqddtEaGhtUUlSbtSQ1Agi2K5cXSUm0DxXfLYouSO9yD",
+        "version": "10"
+      },
+      {
+        "userSymbol": "bmQottle",
+        "libraryId": "1J_Oci2WG7wQ4KffCg8XOs-HID9gaIjEcNFlidE_7gwiJnrgQw24ozKct",
+        "version": "2"
       }
     ]
   }
