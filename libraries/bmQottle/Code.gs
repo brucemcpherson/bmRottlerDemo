@@ -47,6 +47,7 @@ class QottleListener {
 }
 
 class QottleEntry { 
+
   constructor({ qottleOptions = {}, options = {}, entry = {}}) {
     
     // check options are good - they are the same as the queue options and can enrich them
@@ -729,7 +730,8 @@ class Qottle {
       });
     });
   }
-
+  
+  // for emitting an empty event
   _checkEmpty() {
     const empty = this.activeSize() + this.queueSize() === 0;
     if (empty)
