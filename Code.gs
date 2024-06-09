@@ -9,7 +9,7 @@
   // get the source data
   const fiddler = getFiddler ()
   
-  // a fiddler to copy the changed data to
+  // a fiddler to copy the changed data to 
   const copy = bmPreFiddler.PreFiddler().getFiddler({
     id:fiddler.getSheet().getParent().getId(),
     sheetName: 'copy sheet',
@@ -18,6 +18,7 @@
   
   // set up rate limiting for the weather API
   // allow on 40 calls per minute, with at least 100ms betweene ach one
+  // this seems unused
   const rot = bmRottler.newRottler({
     period: 1000 * 60,
     delay: 100,
